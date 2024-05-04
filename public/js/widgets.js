@@ -808,23 +808,23 @@ class ModalDialog {
 				type = "submit";
 			}
 			else if (bt == "apply") {
-				name = "Apply";
+				name = "Appliquer";
 				type = "submit";
 			}
 			else if (bt == "reset") {
-				name = "Reset";
+				name = "Réinitialiser";
 				type = "reset";
 			}
 			else if (bt == "login") {
-				name = "Log in";
+				name = "Connexion";
 				type = "submit";
 			}
 			else if (bt == "cancel") {
-				name = "Cancel";
+				name = "Annuler";
 				type = "close";
 			}
 			else if (bt == "close") {
-				name = "Close";
+				name = "Fermer";
 				type = "close";
 			}
 			else {
@@ -989,13 +989,13 @@ class ReportFilterDialog extends ModalDialog {
 		this._content = null;
 		let item_list = params.item_list || [];
 		this._ui_data = [
-			{ name: "domain", title: "Domain" },
-			{ name: "month", title: "Month" },
-			{ name: "organization", title: "Organization" },
-			{ name: "dkim", title: "DKIM result" },
-			{ name: "spf", title: "SPF result" },
+			{ name: "domain", title: "Domaine" },
+			{ name: "month", title: "Mois" },
+			{ name: "organization", title: "Organisation" },
+			{ name: "dkim", title: "Résultat du DKIM" },
+			{ name: "spf", title: "Résultat du SPF" },
 			{ name: "disposition", title: "Disposition" },
-			{ name: "status", title: "Status" }
+			{ name: "status", title: "État" }
 		].reduce(function(res, item) {
 			if (item_list.includes(item.name))
 				res.push(item);
@@ -1012,7 +1012,7 @@ class ReportFilterDialog extends ModalDialog {
 		let fs = document.createElement("fieldset");
 		fs.setAttribute("class", "round-border titled-input");
 		let lg = document.createElement("legend");
-		lg.appendChild(document.createTextNode("Filter by"));
+		lg.appendChild(document.createTextNode("Filtrer par"));
 		fs.appendChild(lg);
 		this._ui_data.forEach(function(ud) {
 			let el = this._create_select_label(ud.title, fs);
@@ -1061,7 +1061,7 @@ class ReportFilterDialog extends ModalDialog {
 		let ao = document.createElement("option");
 		ao.setAttribute("value", "");
 		ao.setAttribute("selected", "selected");
-		ao.appendChild(document.createTextNode("Any"));
+		ao.appendChild(document.createTextNode("Tout afficher"));
 		sl.appendChild(ao);
 		let v2 = "";
 		if (d) {
