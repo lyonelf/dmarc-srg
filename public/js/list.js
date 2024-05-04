@@ -51,7 +51,7 @@ class ReportList {
 	}
 
 	title() {
-		return "Report List";
+		return "Liste des rapports";
 	}
 
 	onpopstate() {
@@ -154,12 +154,12 @@ class ReportList {
 			}.bind(this)
 		});
 		[
-			{ content: "Domain" },
+			{ content: "Domaine" },
 			{ content: "Date", sortable: true, name: "begin_time" },
-			{ content: "Reporting Organization" },
-			{ content: "Report ID", class: "report-id" },
+			{ content: "Organisation émettrice" },
+			{ content: "ID du rapporteur", class: "report-id" },
 			{ content: "Messages" },
-			{ content: "Result" }
+			{ content: "Résultat" }
 		].forEach(function(col) {
 			let c = this._table.add_column(col);
 			if (c.name() === this._sort.column) {

@@ -245,15 +245,15 @@ Status._element_list = [ "processed", "passed", "forwarded", "failed" ];
 
 Status._element_data = {
 	processed: {
-		text:  "Emails processed"
+		text:  "E-mails analysés"
 	},
 	passed: {
-		text: "Fully aligned"
+		text: "Alignés"
 	},
 	forwarded: {
-		text: "Partially aligned"
+		text: "Partiellement alignés"
 	},
 	failed:	{
-		text: "Not aligned"
+		text: "Non alignés"
 	}
 };
